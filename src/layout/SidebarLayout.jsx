@@ -27,7 +27,7 @@ import Topbar from './Topbar';
 import { Outlet } from 'react-router-dom';  
 const drawerWidth = 200;
 const navItems = [
-  { text: 'Dashboard', icon: <DashboardIcon /> ,path:"/dashboard" },
+  { text: 'Dashboard', icon: <DashboardIcon /> ,path:"/" },
   { text: 'Users', icon: <PeopleIcon /> , path: '/users'},
   { text: 'Products', icon: <InboxIcon /> , path: '/products' },
   { text: 'Reports', icon: <MailIcon />, path: '/reports' },
@@ -119,7 +119,7 @@ export default function SidebarLayout() {
     
         <List>
         {navItems.map((item) => (
-    <ListItem key={item.text} disablePadding sx={{ display: 'block', marginTop:'40px' }}>
+    <ListItem key={item.text} disablePadding sx={{ display: 'block', marginTop:'60px' }}>
       <ListItemButton
 
 component={Link}

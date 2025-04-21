@@ -11,7 +11,7 @@ export default function App() {
       <Routes>
         <Route path="/"  element={<SidebarLayout />}>
         
-          <Route path='dashboard'  element={<Dashboard />} />
+          <Route  index  element={<Dashboard />} />
           <Route path="users" element={<Users />} />
           <Route path="products" element={<Products />} />
           <Route path="reports" element={<Reports />} />

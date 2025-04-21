@@ -35,6 +35,9 @@ import {
     ResponsiveContainer,
     CartesianGrid
   } from "recharts";
+  import UserTable from "../components/Table"
+  import TrafficSalesDashboard from "../components/Traffic"
+  
 
   import ThumbUpIcon from '@mui/icons-material/ThumbUp';
   import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
@@ -49,7 +52,68 @@ import {
       { name: "Březen", zisk: 800 },
       { name: "Duben", zisk: 1600 },
     ];
-  
+    const users = [
+      {
+        name: 'Yiorgos Avraamu',
+        status: 'New',
+        registered: 'Jan 1, 2023',
+        country: '🇺🇸',
+        usage: 50,
+        period: 'Jun 11, 2023 - Jul 10, 2023',
+        payment: 'Mastercard',
+        activity: '10 sec ago',
+      },
+      {
+        name: 'Avram Tarasios',
+        status: 'Recurring',
+        registered: 'Jan 1, 2023',
+        country: '🇧🇷',
+        usage: 22,
+        period: 'Jun 11, 2023 - Jul 10, 2023',
+        payment: 'Visa',
+        activity: '5 minutes ago',
+      },
+      {
+        name: 'Quintin Ed',
+        status: 'New',
+        registered: 'Jan 1, 2023',
+        country: '🇮🇳',
+        usage: 74,
+        period: 'Jun 11, 2023 - Jul 10, 2023',
+        payment: 'Stripe',
+        activity: '1 hour ago',
+      },
+      {
+        name: 'Enéas Kwadwo',
+        status: 'New',
+        registered: 'Jan 1, 2023',
+        country: '🇫🇷',
+        usage: 98,
+        period: 'Jun 11, 2023 - Jul 10, 2023',
+        payment: 'PayPal',
+        activity: 'Last month',
+      },
+      {
+        name: 'Agapetus Tadeáš',
+        status: 'New',
+        registered: 'Jan 1, 2023',
+        country: '🇪🇸',
+        usage: 22,
+        period: 'Jun 11, 2023 - Jul 10, 2023',
+        payment: 'Apple Pay',
+        activity: 'Last week',
+      },
+      {
+        name: 'Friderik Dávid',
+        status: 'New',
+        registered: 'Jan 1, 2023',
+        country: '🇵🇱',
+        usage: 42,
+        period: 'Jun 11, 2023 - Jul 10, 2023',
+        payment: 'Unknown',
+        activity: 'Last week',
+      },
+    ];
 
     const sampleData = [
         { value: 400 },
@@ -64,16 +128,10 @@ import {
       return (
       <Box>
 
-
-
-
-
-        
-
-        <Grid container spacing={2} sx={{ mb: 4 }} >
+        <Grid container spacing={2} sx={{ mb: 4, mt:8 }} >
                   {data.map(item=>(
                       <Grid item xs={12} sm={6} md={3} key={item.name} >
-                 <Paper elevation={3} sx={{ p: 2}}   >
+                 <Paper elevation={3} sx={{ p: 2 , width: 350 }}   >
                    <Typography variant="h6">{item.name}</Typography>
                    <Typography variant="h4">{item.zisk}</Typography>
                  </Paper>
@@ -193,6 +251,16 @@ import {
     </Card>
 
     </Grid>
+    <Divider sx={{ mb: 2 }} />
+
+<TrafficSalesDashboard/>
+<Divider sx={{ mb: 2 }} />
+<UserTable/>
+
+
+
+
+
 
                     </Box>
   
